@@ -50,7 +50,7 @@ func processFile(file string, summer func(string) (int, error)) (int, error) {
 }
 
 func sumLines(lines []string, summer func(string) (int, error)) ([]int, error) {
-	filtered := make([]int, len(lines))
+	sums := make([]int, len(lines))
 
 	for i, line := range lines {
 
@@ -58,10 +58,10 @@ func sumLines(lines []string, summer func(string) (int, error)) ([]int, error) {
 		if err != nil {
 			return nil, err
 		}
-		filtered[i] = lineSum
+		sums[i] = lineSum
 	}
 
-	return filtered, nil
+	return sums, nil
 }
 
 func sumLinePureDigits(line string) (int, error) {
