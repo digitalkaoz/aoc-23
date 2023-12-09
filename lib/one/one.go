@@ -27,6 +27,7 @@ func Command() *cli.Command {
 		ArgsUsage: "path/to/data/file",
 		Usage:     "day 1 of aoc-23",
 		Action: func(cCtx *cli.Context) error {
+			//sum, err := processFile(cCtx.Args().First(), sumLinePureDigits)
 			sum, err := processFile(cCtx.Args().First(), sumLineDigitsAndLetters)
 			if err == nil {
 				fmt.Printf("day 1: total sum is %d\n", sum)

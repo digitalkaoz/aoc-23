@@ -64,7 +64,8 @@ func Command() *cli.Command {
 		Usage:     "day 2 of aoc-23",
 		Action: func(cCtx *cli.Context) error {
 			sum, err := processFile(cCtx.Args().First(), func(game *Game) int {
-				return game.Number()
+				//return game.Number()
+				return game.MinimumSet().Power()
 			})
 			if err == nil {
 				fmt.Printf("day 2: total sum is %d\n", sum)

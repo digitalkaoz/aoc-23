@@ -2,6 +2,7 @@ package main
 
 import (
 	"aoc-23/lib/one"
+	"aoc-23/lib/three"
 	"aoc-23/lib/two"
 	"github.com/urfave/cli/v2"
 	"log"
@@ -21,6 +22,7 @@ func buildCli() *cli.App {
 		Commands: []*cli.Command{
 			one.Command(),
 			two.Command(),
+			three.Command(),
 		},
 	}
 }
