@@ -1,6 +1,7 @@
 package main
 
 import (
+	"aoc-23/lib/four"
 	"aoc-23/lib/one"
 	"aoc-23/lib/three"
 	"aoc-23/lib/two"
@@ -23,6 +24,7 @@ func buildCli() *cli.App {
 			one.Command(),
 			two.Command(),
 			three.Command(),
+			four.Command(),
 		},
 	}
 }
